@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейный сайт</title>
+
+    <style>
+        header {
+            background-color: #663845;
+            padding: 20px;
+            text-align: center;
+            border: none;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+            color: #000000;
+            text-decoration: none;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #FFF;
+            font-weight: bold;
+        }
+        .search {
+            margin-top: 20px;
+        }
+        .search input[type="text"] {
+            padding: 10px;
+            width: 300px;
+        }
+        .search button {
+            padding: 10px 20px;
+            background-color: #FFF;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #663845;
+            padding: 10px 0;
+            text-align: center;
+            color: #FFF;
+        }
+        .slider-container {
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            flex: 0 0 100%; 
+            text-align: center;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #663845;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            z-index: 1;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="Главная.html" class="logo">Кофейный сайт</a>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Меню</a></li>
+                <li><a href="ingredients.html">Ингредиенты</a></li>
+                <li><a href="history.html">История</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Поиск...">
+            <button onclick="searchRecipes()">Найти</button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/f9l20IeC54E?si=2Zd9qx18TYDouCr0" title="История кофе" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>История кофе</p>
+                    </div>
+                    <div class="slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DO-WFyOKkks?si=0uvKgmeQC8ZbdIsZ" title="История кофе 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>История кофе 2</p>
+                    </div>
+                    <div class="slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5p_qj-9LzzU?si=rp91sO67akuRF5XW" title="Факты про кофе" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>Факты про кофе</p>
+                    </div>
+                    <div class="slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bHlK0VOonNc?si=z2DcMdgL_O3f3IMT" title="Кофейные напитки" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>Чем отличаются латте, капуччино и флэт-уайт</p>
+                    </div>
+                </div>
+                <button class="prev">&#60;</button>
+                <button class="next">&#62;</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="subscription-form">
+            <p><strong>Подписка на рассылку</strong></p>
+            <form>
+                <input type="e-mail" placeholder="ko-23-255@turan-edu.kz" required>
+                <button tupe="submit">Подписаться</button>
+            </form>
+        </div>
+
+        <div class="footer-container">
+            <p>&copy; 2024 Винныйинный сайт</p>
+
+            <div class="social-links">
+                <a href="" target="_blank">
+                    <img src="youtube.png" alt="YouTube" class="social-icon">
+                </a>
+            <div class="social-links">
+                <a href="" target="_blank">
+                    <img src="youtube.png" alt="YouTube" class="social-icon">
+                </a>
+            <div class="social-links">
+                 <a href="" target="_blank">
+                    <img src="youtube.png" alt="YouTube" class="social-icon">
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>Контактнакя информация: </strong></p>
+                <p>Электронная почта: <a href="Главная.html">ko-23-255@turan-edu.kz</a></p>
+                <p>Телефон: <a href="tel: +77771234567">+7 (777) 123 - 45- 67</a></p>
+                <p>Адрес: Абая 123, Алма-Ата, Казахстан</p>
+            </div>
+        </div>
+        <p>&copy; 2024 сайт пекарни</p>
+    </footer>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
+        let counter = 0;
+        const totalSlides = document.querySelectorAll('.slide').length; 
+
+        nextBtn.addEventListener('click', () => {
+            counter = (counter + 1) % totalSlides; 
+            slider.style.transform = `translateX(${-100 * counter}%)`;
+        });
+
+        prevBtn.addEventListener('click', () => {
+            counter = (counter - 1 + totalSlides) % totalSlides;
+            slider.style.transform = `translateX(${-100 * counter}%)`;
+        });
+    </script>
+</body>
+</html>
